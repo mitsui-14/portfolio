@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/select.css">
+    <!-- js文件載入 -->
+<script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script>
+        var select = 0;
+        var sel_val = 0;
+        // 網頁載入完成執行
+        $(document).ready(function () {
+            
+            $("#div-cont").empty();
+            // 將預覽圖div1~div13新增到#div-select元素
+            for (var i = 1; i <= 4; i++) {
+                $("#div-cont").append
+                    (
+                    "<div id='div" + i +"'><img src='./images/" + i + ".png'></div>"
+                    );
+                    var foo = document.getElementById('div'+1);
+                foo.style.border='blue 2px solid';
+                $("#div" + i).on("click", { num: i }, fnChange,);
+               
+                
+            }
+        
+        })
+        
+     
+    </script>
+   
+   
+         <script>
+
+       function fnChange(event) {
+                // 取得選取的圖片編號並組成完成圖檔
+                var anotherBo = document.getElementById('div'+event.data.num);
+                var one = document.getElementById('div'+1);
+                var two = document.getElementById('div'+2);
+                var thr = document.getElementById('div'+3);
+                var four = document.getElementById('div'+4);
+                 var filename = "./images/" + event.data.num + ".png"
+                // 顯示圖片
+                $("#show").attr("src", filename);
+                // 以1呈現淡出動畫
+                $("#show").hide().fadeIn(100);
+                if(anotherBo !=one)
+                { 
+                one.style.border='none';
+                two.style.border='none';
+                thr.style.border='none';
+                four.style.border='none';
+                anotherBo.style.border='blue 2px solid'
+            }
+               else{
+                two.style.border='none';
+                thr.style.border='none';
+                four.style.border='none';
+                   one.style.border='blue 2px solid'
+               }
+            }
+            </script>
+            
+</head>
+<body>
+    <header class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a  class="navbar-brand" href="retromantic.html">
+                <h5 class="text-center pt-1">Retromantic</h5>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">- NEW IN -</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">- SALE -</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">- MEN -</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="job.html">- WOMEN -</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">- VINTAGE -</a>
+                    </li>
+                </ul>
+                <div class="ml-auto">
+                    <a href="login.html" class="btn btn-outline-dark text-dark my-2 my-sm-0">登入</a>
+                    <a href="cart.html" class="btn btn-outline-dark text-dark my-2 my-sm-0">購物車</a>
+                    <a href="checkout.html" class="btn btn-outline-dark text-dark my-2 my-sm-0">結帳</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+<section class="container mt-5">
+    <div class="row">
+            <div class="col-12 col-sm-6 col-md-6 col-xs-3 ">
+                <div class="card border-0 mb-3">
+                  <img id="show" class="card-img-top"  src="./images/1.png">
+                   <div id="div-cont" class="card-body d-flex justify-content-between mt-1">
+                
+                   
+                   </div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-sm-6 col-md-6 col-xs-3 ">
+                <div href="#" class="card border-0 mb-3">
+                  
+                    <div class="card-body">
+                         <h4 class="mt-5">NIGEL CABOURN LYBRO 漁夫帽</h4>
+                        <p class="card-text mt-5">NIGEL重新詮釋了阿爾帕西諾（Al Pacino）電影中經常出現的帽子樣式，如今已成為LYBRO的主要產品。 </p>
+                        <h5 class="card-text mt-5">NT$2,600</h5>
+                        <p class="card-text mt-5">顏色</p>
+                        <a href="＃" class="btn btn-outline-secondary btn-md  mt-2">Navy</a>
+                        <a href="＃" class="btn btn-outline-secondary btn-md  mt-2">Green</a>
+                 <p class="card-text mt-3">數量</p>
+    <select class="form-control">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+                        <a href="product.html" class="btn btn-outline-secondary btn-md  mt-5">購買商品</a>
+                        <a href="cart.html" class="btn btn-outline-secondary btn-md mt-5">加入購物車</a>
+                    </div>
+                </div>
+            </div> 
+    </div>
+            
+    </section>                  
+
+    <section class="container mt-5">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <h6 style="text-align: center; font-size: 14px;">您可能還喜歡</h6>
+                <p style="text-align: center; font-size: 11px;">2021 S / S系列以“新古典”為主題，帶點夢幻的太空感，打造金銀交替的視覺饗宴。</p>
+            
+        </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="product.html">
+                <div href="#" class="card mb-3 ">
+                    <img class="card-img-top" src="./images/ring_1.png" >
+                    <div class="card-body">
+                  
+                        <p class="text-center" style="font-size: 13px;">SOIERIE FEMALE 戒指</p>
+                        <p class="text-center" style="font-size: 13px;">NT$2,980</P>
+                        <a href="cart.html" class="btn btn-outline-secondary btn-block">加入購物車</a>
+                        
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="product.html">
+                <div href="#" class="card mb-3">
+                    <img class="card-img-top" src="./images/ring_2.png">
+                    <div class="card-body">
+                  
+                        <p class="text-center" style="font-size: 13px;">SOIERIE NEO 平面項鍊</p>
+                        <p class="text-center" style="font-size: 13px;">NT$4,380</P>
+                        <a href="cart.html" class="btn btn-outline-secondary btn-block">加入購物車</a>
+                        
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="product.html">
+                <div href="#" class="card mb-3">
+                    <img class="card-img-top" src="./images/ring_3.png">
+                    <div class="card-body">
+                  
+                        <p class="text-center" style="font-size: 13px;">SOIERIE STACKING 腳鍊</p>
+                        <p class="text-center" style="font-size: 13px;">NT$2,980</P>
+                        <a href="cart.html" class="btn btn-outline-secondary btn-block">加入購物車</a>
+                        
+                    </div>
+                </div>
+            </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <a href="product.html">
+                <div href="#" class="card mb-3">
+                    <img class="card-img-top" src="./images/ring_4.png">
+                    <div class="card-body">
+                  
+                        <p class="text-center" style="font-size: 13px;">SOIERIE "Neo線圈" 耳扣</p>
+                        <p class="text-center" style="font-size: 13px;">NT$3,880</P>
+                        <a href="cart.html" class="btn btn-outline-secondary btn-block">加入購物車</a>
+                        
+                    </div>
+                </div>
+            </a>
+            </div>
+
+          
+           
+    </section>  
+    
+    <div id="bottomline"> </div>
+   
+   <div class="container pt-3 pb-3">
+    <div class="row">
+       <div class="col-12 col-md-6 col-sm-6 col-xs-3  mb-3 text-center">
+            <a href="#"><p id="itemintro">ABOUT US</p></a>
+            <a href="#"><p>Membership / 會員制度</p></a>
+            <a href="#"><p>Terms & Conditions / 條款與細則</p></a>
+                <a href="#"><p>Returns & Exchange / 退換貨政策</p></a>
+           
+
+       </div>
+       <div class="col-12 col-md-6 col-sm-6 col-xs-3 mb-3 text-center">
+           <a href="#"><img src="./images/icon.png"></a>
+       </div>
+
+   </div> 
+   </div>               
+</body>
+</html>

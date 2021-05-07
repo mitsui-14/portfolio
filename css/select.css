@@ -1,0 +1,106 @@
+
+
+.commodityitem{
+    width: 42.5%;
+}
+#div-cont img{
+    width: 90px;
+    height: 126px;
+  margin: 1px;
+}
+
+.addBorder {
+    border-width: 3px;
+    border-color: blueviolet;
+    border-style: solid;
+}
+.triangle img{
+   width: 52px;
+    height:52px;
+    margin-left: 26px;
+}
+.item{
+    margin:5px 0 5px;
+}
+#real{
+    border:2px solid 	#1E90FF ;
+}
+
+.commodityitem{
+    text-align: left;
+    padding-left: 100px;
+}
+.itemname{
+    font-size: 25px;
+    
+}
+.price{
+    font-size: 25px;
+    margin-top: 30px;
+}
+.color{
+    font-size: 25px;
+    margin-top: 30px;
+    color: gray;
+}
+.colorbutton{
+    display: flex;
+    justify-content: space-between;
+}
+.colorcircus1{
+    width: 35px;
+    height: 35px;
+    border-radius:999em;
+    margin-top: 30px;
+    background-color:#082567;
+}
+
+
+.colorcircus2{
+    width: 35px;
+    height: 35px;
+    border-radius:999em;
+    margin-top: 30px;
+    background-color:#CCB38C;
+    margin-right: 320px;
+    margin-left: 25px;
+}
+.size{
+    width:35px;height:35px;
+
+border-radius:999em;
+
+background-color:white;
+border: 1px solid black;
+text-align: center;
+line-height: 35px;
+margin-top: 30px;
+}
+.size2{
+    width:35px;height:35px;
+    margin-right: 320px;
+    margin-left: 25px;
+
+border-radius:999em;
+
+background-color:white;
+border: 1px solid black;
+text-align: center;
+line-height: 35px;
+margin-top: 30px;
+}
+
+select{
+    
+    height: 25px;
+    margin-top: 40px;
+}
+.buycar{
+    width: 100px;
+    height: 25px;
+    margin-top: 40px;
+    border: 1px solid gray;
+    text-align: center;
+    line-height: 25px;
+    font-size: 13px;
+}
